@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAVEXO - Özel Tasarım Ürünler</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  <script src="Script.js" defer></script>
+</head>
+<body>
+    <!-- Header ve Logo -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-area">
+                    <div class="logo-img">
+                        <img src="Logo/logo.jpg" alt="YAVEXO Logo">
+                    </div>
+                    <div class="brand-name">YAVEXO</div>
+                </div>
+                
+                <div class="contact-buttons">
+                    <a href="https://wa.me/905342401859" target="_blank" class="contact-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://www.instagram.com/yavaxo.giyim42?igsh=MTI3enU0MHdtaHRvdQ==" target="_blank" class="contact-btn">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </div>
+            <div class="header-line"></div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Resim Galerisi -->
+        <section class="gallery-section">
+            <div class="gallery-container">
+                <div class="gallery-slide active">
+                    <img src="Resim1/R1.jpg" alt="Ürün 1" class="slide-img">
+                </div>
+                <div class="gallery-slide">
+                    <img src="Resim1/R2.jpg" alt="Ürün 2" class="slide-img">
+                </div>
+                <div class="gallery-slide">
+                    <img src="Resim1/R3.jpg" alt="Ürün 3" class="slide-img">
+                </div>
+                <div class="gallery-slide">
+                    <img src="Resim1/R4.jpg" alt="Ürün 4" class="slide-img">
+                </div>
+                
+                <div class="gallery-nav">
+                    <button class="nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                
+                <div class="slide-counter">1 / 4</div>
+            </div>
+            
+            <div class="gallery-line"></div>
+        </section>
+        
+        <!-- Sipariş Alanı -->
+        <section class="order-section">
+            <h2 class="section-title">Sipariş Oluştur</h2>
+            
+            <div class="order-form">
+                <!-- Renk Seçenekleri -->
+                <div class="option-group">
+    <h3 class="option-title">Renk Seçenekleri</h3>
+    <div class="color-select-wrapper">
+        <select class="color-select" id="colorSelect">
+            <option value="Kırmızı">Kırmızı</option>
+            <option value="Mavi">Mavi</option>
+            <option value="Krem">Krem</option>
+            <option value="Pembe">Pembe</option>
+            <option value="Mor">Mor</option>
+            <option value="Açık Mavi">Açık Mavi</option>
+            <option value="Siyah" selected>Siyah</option>
+            <option value="Beyaz">Beyaz</option>
+            <option value="Gri">Gri</option>
+            <option value="Kahverengi">Kahverengi</option>
+            <option value="Yeşil">Yeşil</option>
+            <option value="Açık Yeşil">Açık Yeşil</option>
+            <option value="Turuncu">Turuncu</option>
+            <option value="Sarı">Sarı</option>
+        </select>
+    </div>
+</div>
+                <!-- Baskı Seçenekleri -->
+                <div class="option-group">
+                    <h3 class="option-title">Baskı Seçenekleri</h3>
+                    <div class="print-options">
+                        <div class="print-option" data-print="hazır baskı">
+                            <img src="https://share.google/FyMFMn9t5d51jN0Zn" alt="hazır baskı" class="print-img">
+                            <div class="print-name">elimizde bulunan baskılar</div>
+                            <div class="print-desc">hazır baskı</div>
+                        </div>
+                        <div class="print-option selected" data-print="kelime baskı">
+                            <img src="https://share.google/sy3J6PN8dIykTF2Zk" alt="kelime baskı" class="print-img">
+                            <div class="print-name">kişiye özel kelime cümle yazma</div>
+                            <div class="print-desc">kelime yazma</div>
+                        </div>
+                        <div class="print-option" data-print="takım baskı">
+                            <img src="https://share.google/LSn8GkPLnFdpMrJze" alt="takım baskı" class="print-img">
+                            <div class="print-name">takım logo baskıları</div>
+                            <div class="print-desc">takım baskıları</div>
+                        </div>
+                        <div class="print-option" data-print="özel baskı">
+                            <img src="https://share.google/K4nCdix6JfZ0P8rvG" alt="özel baskı" class="print-img">
+                            <div class="print-name">kişiye özel baskı</div>
+                            <div class="print-desc">özel baskı</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Detaylar Paneli -->
+                <div class="details-panel" id="detailsPanel">
+                    <h3 class="details-title">Seçilen Özellikler</h3>
+                    <div class="selected-options">
+                        <div class="selected-option">
+                            <div class="option-label">Seçilen Renk:</div>
+                            <div class="option-value" id="selectedColor">Siyah</div>
+                        </div>
+                        <div class="selected-option">
+                            <div class="option-label">Seçilen Baskı:</div>
+                            <div class="option-value" id="selectedPrint">Yüksek Çözünürlüklü</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sipariş Tamamlama Butonu -->
+                <div class="order-btn-container">
+                    <button class="order-btn" id="completeOrder">Siparişi Tamamla</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>04/12/2025 YAVEXO tarzın senin imzan</p>
+    </footer>
+</body>
+</html>
